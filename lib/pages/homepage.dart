@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:to_do/pages/mydrawer.dart';
 
 Widget mycard(String task) {
   return Container(
@@ -23,7 +24,7 @@ Widget mycard(String task) {
           },
           icon: Icon(Icons.delete),
           label: Text('Delete task'),
-          style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.deepPurple) ),
+          style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.black) ),
         )
       ]),
     ),
@@ -45,6 +46,7 @@ class homepage extends StatelessWidget {
           ),
           centerTitle: true,
         ),
+        drawer: mydrawer(),
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[

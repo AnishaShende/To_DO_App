@@ -25,9 +25,9 @@ class _newtaskState extends State<newtask> {
           children: <Widget> [
             TextField(
               decoration: InputDecoration(
-                labelStyle: TextStyle(color: Colors.deepPurple),
-                border: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black)
+                labelStyle: TextStyle(color: Colors.black),
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.deepPurple)
                 ),
                 labelText: 'Add Task',
                 hintText: 'Enter your task'
