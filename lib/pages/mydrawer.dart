@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:to_do/main.dart';
+import 'package:to_do/pages/homepage.dart';
+import 'package:to_do/pages/login.dart';
 
 class mydrawer extends StatelessWidget {
   const mydrawer({super.key});
@@ -37,7 +39,15 @@ class mydrawer extends StatelessWidget {
               ),
               title: TextButton(
                 style: ButtonStyle(),
-                onPressed: () {},
+                onPressed: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => homepage(),
+                            ),
+                          );
+                          // setDefaultVar();
+                        },
                 child: Text(
                   'Home',
                   style: TextStyle(
@@ -55,9 +65,15 @@ class mydrawer extends StatelessWidget {
               ),
               title: TextButton(
                 style: ButtonStyle(),
-                onPressed: () {
-                
-                },
+                onPressed: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => login(),
+                            ),
+                          );
+                          // setDefaultVar();
+                        },
                 child: Text(
                   'Profile Login',
                   style: TextStyle(
